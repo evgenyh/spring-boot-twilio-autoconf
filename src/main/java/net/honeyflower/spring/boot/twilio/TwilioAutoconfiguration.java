@@ -39,8 +39,8 @@ public class TwilioAutoconfiguration {
     }
     
     @Bean
-    @ConditionalOnProperty(prefix = "twilio", value = {"appId", "authyApiKey"})
+    @ConditionalOnProperty(prefix = "twilio", value = {"appId", "apiKey"})
     public VerifyTokenBuilder verifyTokenBuilder() {
-        return new VerifyTokenBuilder(properties.getAppId(), properties.getAuthyApiKey());
+        return new VerifyTokenBuilder(properties.getAppId(), properties.getApiKey());
     }
 }

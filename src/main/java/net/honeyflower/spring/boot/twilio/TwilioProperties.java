@@ -12,6 +12,6 @@ public class TwilioProperties {
     private String authToken;
     private String password;
     private String appId;
-    private String authyApiKey;
+    private String apiKey;
 
 }

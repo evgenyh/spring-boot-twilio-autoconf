@@ -13,13 +13,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class VerifyTokenBuilder {
 	
 	private final String APP_ID;
-	private final byte[] AUTHY_API_KEY;
+	private final byte[] API_KEY;
 	private final JwtBuilder builder;
 	
 	
-	public VerifyTokenBuilder(String appId, String twilioAuthyKey) {
+	public VerifyTokenBuilder(String appId, String apiKey) {
 		APP_ID = appId;
-		AUTHY_API_KEY = twilioAuthyKey.getBytes();
+		API_KEY = apiKey.getBytes();
 		builder = Jwts.builder();
 	}
 
@@ -34,7 +34,7 @@ public class VerifyTokenBuilder {
 		return builder
 				.claim("phone_number", phone)
 				.claim("app_id", APP_ID)
-				.signWith(SignatureAlgorithm.HS256, AUTHY_API_KEY)
+				.signWith(SignatureAlgorithm.HS256, API_KEY)
 				.compact();
 	}
 }
