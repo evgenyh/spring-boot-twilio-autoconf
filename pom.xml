@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.honeyflower.spring.twilio</groupId>
-    <artifactId>spring-boot-twilio-configurer</artifactId>
+    <groupId>net.honeyflower.spring</groupId>
+    <artifactId>spring-boot-starter-twilio</artifactId>
     <version>1.0-SNAPSHOT</version>
     
     <properties>
