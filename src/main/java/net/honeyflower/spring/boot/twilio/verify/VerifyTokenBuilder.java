@@ -5,6 +5,7 @@ import java.util.Date;
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.impl.TextCodec;
 
 /**
  * generates token for twilio phone  verify flow
@@ -15,13 +16,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class VerifyTokenBuilder {
 	
 	private final String APP_ID;
-	private final String API_KEY;
+	private final byte[] API_KEY;
 	private final JwtBuilder builder;
 	
 	
 	public VerifyTokenBuilder(String appId, String apiKey) {
 		APP_ID = appId;
-		API_KEY = apiKey;
+		API_KEY = TextCodec.BASE64.decode(apiKey);
 		builder = Jwts.builder();
 	}
 
