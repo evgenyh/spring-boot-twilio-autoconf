@@ -32,7 +32,7 @@ public class TwilioAutoconfigurationTest {
 	@Test
 	public void shouldInstantiateVerifyTokenBuilderWithSettings() throws Exception {
 		assertThat(verifyTokenBuilder).isNotNull();
-		assertThat(verifyTokenBuilder.generateToken("+12345678900")).isEqualTo("eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZV9udW1iZXIiOiIrMTIzNDU2Nzg5MDAiLCJhcHBfaWQiOiIxMjM0NSJ9.-uN0bZEUCsoL-JkfmngCnyqy5wi8XPb_6OtI2PBT8EI");
+		assertThat(verifyTokenBuilder.generateToken("+12345678900")).isEqualTo("eyJhbGciOiJIUzI1NiJ9.eyJwaG9uZV9udW1iZXIiOiIrMTIzNDU2Nzg5MDAiLCJhcHBfaWQiOiIxMjM0NSIsImlhdCI6MTUzOTI2MDg1Nn0.azBCHBjWgAe9EQ9Q49ICbOqbpkM0997Z5JxoVWcUD24");
 	}
 
 	@EnableAutoConfiguration

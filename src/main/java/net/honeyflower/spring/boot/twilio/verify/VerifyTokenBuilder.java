@@ -15,13 +15,13 @@ import io.jsonwebtoken.SignatureAlgorithm;
 public class VerifyTokenBuilder {
 	
 	private final String APP_ID;
-	private final byte[] API_KEY;
+	private final String API_KEY;
 	private final JwtBuilder builder;
 	
 	
 	public VerifyTokenBuilder(String appId, String apiKey) {
 		APP_ID = appId;
-		API_KEY = apiKey.getBytes();
+		API_KEY = apiKey;
 		builder = Jwts.builder();
 	}
 
