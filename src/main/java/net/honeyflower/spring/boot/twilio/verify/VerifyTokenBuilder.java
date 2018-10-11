@@ -1,5 +1,7 @@
 package net.honeyflower.spring.boot.twilio.verify;
 
+import java.util.Date;
+
 import io.jsonwebtoken.JwtBuilder;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
@@ -34,6 +36,7 @@ public class VerifyTokenBuilder {
 		return builder
 				.claim("phone_number", phone)
 				.claim("app_id", APP_ID)
+				.setIssuedAt(new Date())
 				.signWith(SignatureAlgorithm.HS256, API_KEY)
 				.compact();
 	}
